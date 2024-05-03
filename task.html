@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findData()
+        {
+            let arr = [
+        {name:"Ram",age:12},
+        {name:"Sam",age:16},
+        {name:"mahesh",age:17},
+        {name:"aman",age:22},
+        {name:"Raman",age:22},
+    
+        
+    ];
+    var name = document.getElementById("txt1").value;
+    var msg = "";
+    let objArray = arr.filter(x =>x.name=== name);
+    console.log(objArray[0]);
+   msg = "welcome "+ objArray[0].name +" your age is : "+objArray[0].age;
+   document.getElementById("hresult").innerHTML=msg;
+}        
+        </script>
+</head>
+<body>
+     
+    Enter naem : <input type="text" id="txt1"/>
+    <input type="button" style="color:white;background-color: blue; height:50px; width:150px;border: 2px doubled white" value=" find" onclick="findData();"/>
+    <h1 id="hresult"></h1>
+</body>
+</html>
